@@ -7,11 +7,11 @@ namespace DataStructuresAlgorithm
         static string searchFilePath = @"E:\BridgeLabz\DataStructureAlgorithm\DataStructuresAlgorithm\Search.txt";
         private static void Main(string[] args)
         {
-            Console.WriteLine("Enter option to get O/p :\n1.Binary Search\n2.Exit");
-            int option = Convert.ToInt32(Console.ReadLine());
             bool flag = true;
             while (flag)
             {
+                Console.WriteLine("Enter option to get O/p :\n1.Binary Search\n2.Anagram \n3.Exit");
+                int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
                     case 1:
@@ -19,6 +19,10 @@ namespace DataStructuresAlgorithm
                         search.ReadTextFileAndSearch(searchFilePath);
                         break;
                     case 2:
+                        Anagram output = new Anagram();
+                        output.CheckAnagram();
+                        break;
+                    case 3:
                         flag = false;
                         break;
                     default:
