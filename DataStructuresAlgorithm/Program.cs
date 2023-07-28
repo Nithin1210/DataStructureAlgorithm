@@ -13,7 +13,8 @@ namespace DataStructuresAlgorithm
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\n Enter option to get O/p :\n1.Binary Search\n2.Anagram\n3.StringReplace \n4.Insertion sort \n5.Exit");
+                Console.WriteLine("\n Enter option to get O/p :\n1.Binary Search\n2.Anagram\n3.StringReplace \n4.Insertion sort \n5.Bubble sort " +
+                                    "\n6.PrimeNumberRange \n7.PrimePalandrome \n8.UnOrdered List \n9.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -34,6 +35,23 @@ namespace DataStructuresAlgorithm
                         insertion.InsertionSortAlgorithm();
                         break;
                     case 5:
+                        BubbleSort bubble = new BubbleSort();
+                        bubble.BubbleSortAlgorithm();
+                        break;
+                    case 6:
+                        PrimeNumberRange range = new PrimeNumberRange();
+                        range.CheckPrime();
+                        break;
+                    case 7:
+                        PrimePalandrome prime = new PrimePalandrome();
+                        prime.CheckPrimePalandrome();
+                        break;
+
+                    case 8:
+                        Opertion unorderListProblem = new Opertion();
+                        unorderListProblem.ReadFileAndPerformOperation(unOrderedFilePath);
+                        break;
+                    case 9:
                         flag = false;
                         break;
                     default:
