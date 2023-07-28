@@ -14,7 +14,7 @@ namespace DataStructuresAlgorithm
             while (flag)
             {
                 Console.WriteLine("\n Enter option to get O/p :\n1.Binary Search\n2.Anagram\n3.StringReplace \n4.Insertion sort \n5.Bubble sort " +
-                                    "\n6.PrimeNumberRange\n7.Exit");
+                                    "\n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -39,10 +39,6 @@ namespace DataStructuresAlgorithm
                         bubble.BubbleSortAlgorithm();
                         break;
                     case 6:
-                        PrimeNumberRange range = new PrimeNumberRange();
-                        range.CheckPrime();
-                        break;
-                    case 9:
                         flag = false;
                         break;
                     default:
