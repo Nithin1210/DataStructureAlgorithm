@@ -1,4 +1,4 @@
-﻿using DataStructureAlgorithm.UnOrderedList;
+﻿
 using System;
 using System.Net;
 
@@ -7,14 +7,13 @@ namespace DataStructuresAlgorithm
     class Program
     {
         static string searchFilePath = @"E:\BridgeLabz\DataStructureAlgorithm\DataStructuresAlgorithm\Search.txt";
-        static string unOrderedFilePath = @"E:\BridgeLabz\DataStructureAlgorithm\DataStructuresAlgorithm\UnOrderedList\UnOrdered.txt";
         private static void Main(string[] args)
         {
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("\n Enter option to get O/p :\n1.Binary Search\n2.Anagram\n3.StringReplace \n4.Insertion sort \n5.Bubble sort " +
-                                    "\n6.PrimeNumberRange \n7.PrimePalandrome \n8.UnOrdered List \n9.Exit");
+                                    "\n6.PrimeNumberRange \n7.PrimePalandrome \n8.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -46,12 +45,7 @@ namespace DataStructuresAlgorithm
                         PrimePalandrome prime = new PrimePalandrome();
                         prime.CheckPrimePalandrome();
                         break;
-
                     case 8:
-                        Opertion unorderListProblem = new Opertion();
-                        unorderListProblem.ReadFileAndPerformOperation(unOrderedFilePath);
-                        break;
-                    case 9:
                         flag = false;
                         break;
                     default:
