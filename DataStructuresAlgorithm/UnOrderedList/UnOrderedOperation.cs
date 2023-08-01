@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructureAlgorithm.UnOrderedList
 {
-    public class Opertion
+    public class UnOrderedOpertion
     {
         public void ReadFileAndPerformOperation(string filepath)
         {
