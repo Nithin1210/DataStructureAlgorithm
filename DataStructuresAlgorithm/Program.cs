@@ -1,6 +1,7 @@
 ﻿using DataStructureAlgorithm.UnOrderedList;
 using DataStructuresAlgorithm.BlancedParanthesis;
 using DataStructuresAlgorithm.OrderedList;
+using DataStructuresAlgorithm.Simulate_Banking_Cash_Counter;
 using System;
 using System.Net;
 
@@ -18,7 +19,7 @@ namespace DataStructuresAlgorithm
             while (flag)
             {
                 Console.WriteLine("\n Enter option to get O/p :\n1.Binary Search\n2.Anagram\n3.StringReplace \n4.Insertion sort \n5.Bubble sort " +
-                                    "\n6.PrimeNumberRange \n7.PrimePalandrome \n8.UnOrdered List \n9.Ordered List \n10.BlancedParanthesis \n11.Exit !");
+                                    "\n6.PrimeNumberRange \n7.PrimePalandrome \n8.UnOrdered List \n9.Ordered List \n10.BlancedParanthesis \n11.Banking Cash \n12.Exit !!");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -64,6 +65,11 @@ namespace DataStructuresAlgorithm
                         BalancedOperation.ReadFileAndPerformOperation(BalancedFilePath);
                         break;
                     case 11:
+                        Bank bank = new Bank();
+                        bank.Balance(0);
+                        bank.AddPersonsInQueue();
+                        break;
+                    case 12:
                         flag = false;
                         break;
                     default:
