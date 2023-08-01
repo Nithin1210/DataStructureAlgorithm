@@ -1,4 +1,5 @@
 ﻿using DataStructureAlgorithm.UnOrderedList;
+using DataStructuresAlgorithm.BlancedParanthesis;
 using DataStructuresAlgorithm.OrderedList;
 using System;
 using System.Net;
@@ -10,13 +11,14 @@ namespace DataStructuresAlgorithm
         static string searchFilePath = @"E:\BridgeLabz\DataStructureAlgorithm\DataStructuresAlgorithm\Search.txt";
         static string unOrderedFilePath = @"E:\BridgeLabz\DataStructureAlgorithm\DataStructuresAlgorithm\UnOrderedList\UnOrdered.txt";
         static string OrderedFliePath = @"E:\BridgeLabz\DataStructureAlgorithm\DataStructuresAlgorithm\OrderedList\Order.txt";
+        static string BalancedFilePath = @"E:\BridgeLabz\DataStructureAlgorithm\DataStructuresAlgorithm\BlancedParanthesis\Balanced.txt";
         private static void Main(string[] args)
         {
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("\n Enter option to get O/p :\n1.Binary Search\n2.Anagram\n3.StringReplace \n4.Insertion sort \n5.Bubble sort " +
-                                    "\n6.PrimeNumberRange \n7.PrimePalandrome \n8.UnOrdered List \n9.Ordered List \n10.Exit");
+                                    "\n6.PrimeNumberRange \n7.PrimePalandrome \n8.UnOrdered List \n9.Ordered List \n10.BlancedParanthesis \n11.Exit !");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -58,10 +60,14 @@ namespace DataStructuresAlgorithm
                         OrderedOperation.ReadFileAndPerformOperation(OrderedFliePath);
                         break;
                     case 10:
+                        BalancedOperation BalancedOperation = new BalancedOperation();
+                        BalancedOperation.ReadFileAndPerformOperation(BalancedFilePath);
+                        break;
+                    case 11:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("Enter the  i/p : ");
+                        Console.WriteLine("Enter the Correct i/p : ");
                         break;
 
                 }
